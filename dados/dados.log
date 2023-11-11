@@ -1,0 +1,51 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Tue Nov 7 00:44:50 2023
+Version 19.20.0.0.0
+
+Copyright (c) 1982, 2023, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   dados.ctl
+Data File:      ./Matrizes.csv
+  Bad File:     Matrizes.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table MATRIZES, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+NODE_ID                             FIRST   255   ,  O(") CHARACTER            
+CENTROIDE                            NEXT   255   ,  O(") CHARACTER            
+UF                                   NEXT     2   ,  O(") CHARACTER            
+
+
+Table MATRIZES:
+  5579 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 130000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:          5579
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue Nov 07 00:44:50 2023
+Run ended on Tue Nov 07 00:44:57 2023
+
+Elapsed time was:     00:00:07.49
+CPU time was:         00:00:00.05
