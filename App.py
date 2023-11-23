@@ -83,7 +83,6 @@ class Interface:
         consulta3_button = tk.Button(root, text="Exportar descrições", command=lambda: self.consulta_e_exporta(3))
         consulta3_button.pack(pady=10)
 
-        # Menu
         menu = tk.Menu(root)
         root.config(menu=menu)
 
@@ -160,7 +159,7 @@ class Interface:
 
     def consulta_e_exporta(self, numero_consulta):
         consulta = {
-            1: "SELECT * FROM T_PLPL_MEDICAMENTO",  # Adicione a condição desejada
+            1: "SELECT * FROM T_PLPL_MEDICAMENTO",
             2: "SELECT NM_MEDICAMENTO FROM T_PLPL_MEDICAMENTO",
             3: "SELECT DS_DETALHADA_MEDICAMENTO FROM T_PLPL_MEDICAMENTO",
         }[numero_consulta]
@@ -173,7 +172,6 @@ class Interface:
         try:
             dados_formatados = []
             for row in dados:
-                # Convertendo cada valor de data em uma string
                 row_formatado = list(row)
                 for i, valor in enumerate(row_formatado):
                     if isinstance(valor, datetime):
